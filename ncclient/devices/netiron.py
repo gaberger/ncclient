@@ -16,6 +16,9 @@ class NetironDeviceHandler(DefaultDeviceHandler):
 
     def get_xml_base_namespace_dict(self):
         return { None : BASE_NS_1_0 }
-    
+	#d =  { 'brcd' : "http://brocade.com/ns/netconf/config/netiron-config/"} 
+	#d.update(self.get_xml_base_namespace_dict())
+	#return {"nsmap" : d}
+
     def handle_connection_exceptions(self, sshsession):
         return False
